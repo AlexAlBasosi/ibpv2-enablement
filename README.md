@@ -65,3 +65,15 @@ saas: "{{ lookup('file', 'service-creds.json') | from_json }}"
      For more information on this task, follow the process to create a new Fabric Environment documented here: https://github.com/IBM-Blockchain/blockchain-vscode-extension#connecting-to-another-instance-of-hyperledger-fabric
 
    - If you are using the IBM Blockchain Platform on IBM Cloud, you do need to import these JSON files into your wallet using the web console. You will then need to assiociate each node with the correct identity. If you do not do this, then you will be unable to administer the nodes using the web console.
+
+## Import the identities
+
+Coming soon!
+
+## Submit a transaction
+
+Coming soon!
+
+## Upgrade the smart contract
+
+Coming soon!
