@@ -16,7 +16,70 @@ In this tutorial, we're going to use an Ansible playbook to build a Hyperledger 
 
 ### Create an instance of the IBM Blockchain Platform
 
-Coming soon!
+First, we need to create an instance of the IBM Blockchain Platform.
+
+1.  Head over to [IBM Cloud](cloud.ibm.com), and log in with your credentials.
+2.  Click on the hamburger menu on the left, and you will see a selection of services. Click **Blockchain**.
+
+<img src="./images/Landing-page.png" />
+
+3. Select **Service Plans**.
+
+<img src="./images/ibp.png" />
+
+4. Leave all the default values. Make sure the Region is set to **Dallas**. Click **Create**.
+
+<img src="./images/wizard.png" />
+
+5. Before you proceed with creating the Cluster, click on the **Service Credentials** tab on the left.
+
+6. Click **New credential**. You should be presented with the following form:
+
+<img src="./images/new-credential.png" />
+
+Leave the default values as they are. Click **Add**.
+
+7. When the credentials finish creating, click **View credentials** from the table.
+
+You will a JSON object that looks similar to the below:
+
+```json
+{
+  "api_endpoint": "https://xxxxxx-optools.uss02.blockchain.cloud.ibm.com",
+
+  "apikey": "xxxxxx",
+
+  "configtxlator": "https://xxxxxx-configtxlator.uss02.blockchain.cloud.ibm.com",
+
+  "iam_apikey_description": "Auto-generated for key xxxxxx",
+
+  "iam_apikey_name": "xxxxxx",
+
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/xxxxxx::serviceid:ServiceId-xxxxxx"
+}
+```
+
+Save this somewhere, as we're going to need it later on in the tutorial.
+
+8. On the tab on the left, select **Manage**. This will bring you back to the cluster installation wizard.
+
+9. Click **Let's get setup!**
+
+10. An IBM Cloud Kubernetes Service cluster is required for deployment, as it's the mechanism upon which the Blockchain network sits. Click **Create an IBM Cloud Kubernetes Service cluster**.
+
+<img src="./images/cluster.png" />
+
+11. Continue to IBM Cloud Kubernetes service. This will open a new tab.
+
+<img src="./images/free-cluster.png" />
+
+12. Make sure you select **Free cluster**. Click **Create**. This will start the process of spinning up your Kubernetes cluster, and might take up to a few minutes.
+
+13. When the status of the cluster is **Normal**, go back to the wizard on the previous tab, and click **Next**.
+
+14.
 
 ### Spin up the network
 
