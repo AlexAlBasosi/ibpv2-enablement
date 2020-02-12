@@ -32,7 +32,7 @@ type: saas
 saas: "{{ lookup('file', 'service-creds.json') | from_json }}"
 ```
 
-2. Create a file named `service-creds.json` that contains valid service credentials for an IBM Blockchain Platform service instance on IBM Cloud. These service credentials should be of the format:
+2. Create a file named `service-creds.json` that contains valid service credentials from your IBM Blockchain Platform service instance on IBM Cloud. These service credentials should be of the format:
 
 ```json
 {
@@ -56,25 +56,17 @@ saas: "{{ lookup('file', 'service-creds.json') | from_json }}"
 
    `ansible-playbook playbook.yml`
 
-4) Information on the available nodes (peers, orderers, and certificate authorities) will be created under the `nodes` subdirectory.
+4. Head over to your instance of the IBM Blockchain Platform running on IBM Cloud. You should now see your Peers, Certificate Authority and Orderer running, like the below:
 
-   - If you wish to use this network for development purposes, you can import these JSON files into a Fabric Environment using the IBM Blockchain Platform extension for Visual Studio Code.
+![IBP Console](/images/Console.jpg)
 
-     For more information on this task, follow the process to create a new Fabric Environment documented here: https://github.com/IBM-Blockchain/blockchain-vscode-extension#connecting-to-another-instance-of-hyperledger-fabric
-
-   - If you are using the IBM Blockchain Platform on IBM Cloud, you do not need to import these JSON files. All of the nodes will already be present in your web console.
-
-5. The `wallets` subdirectory will contain all of the identities (certificates and private keys) enrolled by this playbook. You must be careful to persist all of these files for the next time you run this playbook, otherwise you will be unable to administer your IBM Blockchain Platform network.
-
-   - If you wish to use this network for development purposes, you can import these JSON files into a wallet using the IBM Blockchain Platform extension for Visual Studio Code.
-
-     For more information on this task, follow the process to create a new Fabric Environment documented here: https://github.com/IBM-Blockchain/blockchain-vscode-extension#connecting-to-another-instance-of-hyperledger-fabric
-
-   - If you are using the IBM Blockchain Platform on IBM Cloud, you do need to import these JSON files into your wallet using the web console. You will then need to assiociate each node with the correct identity. If you do not do this, then you will be unable to administer the nodes using the web console.
+Information on the available nodes (peers, orderers, and certificate authorities) will be created under the `nodes` subdirectory. Since you are using the IBM Blockchain Platform on IBM Cloud, you **do not** need to import these JSON files. All of the nodes will already be present in your web console.
 
 ## Import the identities
 
-Coming soon!
+The `wallets` subdirectory will contain all of the identities (certificates and private keys) enrolled by this playbook. You must be careful to persist all of these files for the next time you run this playbook, otherwise you will be unable to administer your IBM Blockchain Platform network.
+
+Since you are using the IBM Blockchain Platform on IBM Cloud, you **do** need to import these JSON files into your wallet using the web console. You will then need to assiociate each node with the correct identity. If you do not do this, then you will be unable to administer the nodes using the web console.
 
 ## Submit a transaction
 
