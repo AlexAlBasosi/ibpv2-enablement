@@ -56,7 +56,7 @@ saas: "{{ lookup('file', 'service-creds.json') | from_json }}"
 
    `ansible-playbook playbook.yml`
 
-4. Head over to your instance of the IBM Blockchain Platform running on IBM Cloud. You should now see your Peers, Certificate Authority and Orderer running, like the below:
+4. Head over to your instance of the IBM Blockchain Platform running on IBM Cloud. You should now see your Peers, Certificate Authorities and Orderer running, like the below:
 
 <img src="./images/Console.png" />
 
