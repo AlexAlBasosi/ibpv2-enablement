@@ -58,7 +58,7 @@ saas: "{{ lookup('file', 'service-creds.json') | from_json }}"
 
 4. Head over to your instance of the IBM Blockchain Platform running on IBM Cloud. You should now see your Peers, Certificate Authority and Orderer running, like the below:
 
-![IBP Console](./images/Console.jpg "IBP Console")
+<img src="./images/Console.jpg" />
 
 Information on the available nodes (peers, orderers, and certificate authorities) will be created under the `nodes` subdirectory. Since you are using the IBM Blockchain Platform on IBM Cloud, you **do not** need to import these JSON files. All of the nodes will already be present in your web console.
 
