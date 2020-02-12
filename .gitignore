@@ -6,3 +6,4 @@ nodes
 wallets
 !**/.gitkeep
 service-creds.json
+.DS_Store
