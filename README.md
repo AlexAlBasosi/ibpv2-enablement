@@ -10,11 +10,7 @@ To follow along with this tutorial, you will first need to follow these steps:
 
    `ansible-galaxy install -r requirements.yml --force`
 
-## Set up the network
-
-In this tutorial, we're going to use an Ansible playbook to build a Hyperledger Fabric network with two organizations, `Org1` and `Org2`. Each organization has two peers. The two peers are configured with a single channel, `channel1`. The FabCar sample contract is instantiated on this channel, with an endorsement policy stating that both organizations must endorse any transactions.
-
-### Create an instance of the IBM Blockchain Platform
+## Create an instance of the IBM Blockchain Platform
 
 First, we need to create an instance of the IBM Blockchain Platform.
 
@@ -79,9 +75,23 @@ Save this somewhere, as we're going to need it later on in the tutorial.
 
 13. When the status of the cluster is **Normal**, go back to the wizard on the previous tab, and click **Next**.
 
-14.
+14. Select the cluster you just created. Click **Next**.
 
-### Spin up the network
+<img src="./images/link.png" />
+
+This may take a few minutes.
+
+15. Click **Launch the IBM Blockchain Platform console**.
+
+<img src="./images/launch.png" />
+
+Now, your IBM Blockchain Platform console is ready to use.
+
+<img src="./images/ibp-launched.png" />
+
+## Set up the network
+
+In this tutorial, we're going to use an Ansible playbook to build a Hyperledger Fabric network with two organizations, `Org1` and `Org2`. Each organization has two peers. The two peers are configured with a single channel, `channel1`. The FabCar sample contract is instantiated on this channel, with an endorsement policy stating that both organizations must endorse any transactions.
 
 This Ansible playbook defaults to deploying to Docker. To configure the Ansible playbook to deploy to the IBM Blockchain Platform on IBM Cloud, follow these steps:
 
